@@ -1,0 +1,26 @@
+<h1>GATOS</h1>
+
+
+<br>
+<form action="">
+<div>
+    <select #tipo name="tipo">
+        @for(item of mostrar; track $index){
+          <option value="{{item.id}}">{{item.tipo}}</option> 
+       }
+    </select>
+    <label for="">Descripcion
+        <input type="text" #descripcion name="descripcion" id="" required>
+    </label>
+    <label for="">Monto
+        <input type="integer" #monto name="monto" id="" required>
+    </label>
+    <label for="">Fecha
+        <input type="date" #fecha name="fecha" id="" required>
+    </label>
+    <button type="button" (click)="registerGasto(tipo,descripcion,monto,fecha)">Registrar</button>
+</div>
+
+</form>
+
+<h1>{{gasto}}</h1>
